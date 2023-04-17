@@ -1,4 +1,4 @@
-version: "3.10"
+version: "4.18.0"
 
 services:
   app:
@@ -15,11 +15,11 @@ services:
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=Rohit@123
       - MYSQL_DATABASE=userdb
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=qwerty@123
-      - MYSQL_HOST=db
+      - MYSQL_PASSWORD=Rohit@123
+      - MYSQL_HOST=localhost
 
     depends_on:
       - db
@@ -27,12 +27,12 @@ services:
   db:
     image: mysql:latest
     volumes:
-      - dev-db-data:/usr/local/mysql/bin
+      - dev-db-data:/user/local/mysql/bin
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=Rohit@123
       - MYSQL_DATABASE=userdb
-      - MYSQL_USER=testuser
-      - MYSQL_PASSWORD=testuser
+      - MYSQL_USER=rohit
+      - MYSQL_PASSWORD=123456
 
 volumes:
   dev-db-data:
