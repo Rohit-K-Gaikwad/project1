@@ -16,7 +16,7 @@ services:
              python manage.py runserver 0.0.0.0:8000"
     environment:
       - MYSQL_ROOT_PASSWORD=Rohit@123
-      - MYSQL_DATABASE=userdb
+      - MYSQL_DATABASE=starwarsdb
       - MYSQL_USER=root
       - MYSQL_PASSWORD=Rohit@123
       - MYSQL_HOST=localhost
@@ -30,9 +30,9 @@ services:
       - dev-db-data:/user/local/mysql/bin
     environment:
       - MYSQL_ROOT_PASSWORD=Rohit@123
-      - MYSQL_DATABASE=userdb
-      - MYSQL_USER=rohit
-      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=starwarsdb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Rohit@123
 
 volumes:
   dev-db-data:
