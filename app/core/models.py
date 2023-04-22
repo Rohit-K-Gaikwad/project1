@@ -59,7 +59,8 @@ class UserManager(BaseUserManager):
         So make sure you are spelling hte method name correctly
 
         Refer -
-        https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#writing-a-manager-for-a-custom-user-model
+        https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#writing
+        -a-manager-for-a-custom-user-model
 
         Args:
             email:
@@ -90,4 +91,4 @@ class User(AbstractBaseUser, PermissionsMixin):
     # We are overriding default manager with our custom manager here.
     objects = UserManager()
 
-    USERNAME_FIELD = "email"  # overrides the default user field from base class
+    USERNAME_FIELD = "email" # overrides the default user field from base class
