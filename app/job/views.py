@@ -5,8 +5,8 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.generics import CreateAPIView
 from .serializers import JobTitleSerializer, JobDescriptionSerializer
-from core.models import JobTitle
-from job import serializers
+from app.core.models import JobTitle
+from app.job import serializers
 from rest_framework import serializers
 
 

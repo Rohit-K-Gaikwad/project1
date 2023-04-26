@@ -93,10 +93,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     # We are overriding default manager with our custom manager here.
     objects = UserManager()
 
-<<<<<<< HEAD
     USERNAME_FIELD = "email"  # overrides the default user field from baseclass
-=======
-    USERNAME_FIELD = "email"  # overrides the default user field from base class
 
 
 class Portal(models.Model):
@@ -171,6 +168,3 @@ class Applicant(User):
 
     def __str__(self):
         return self.name
-
-
->>>>>>> 063f9ab84e543b0e7d701e78d35ce8b7815c478e

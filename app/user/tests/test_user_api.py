@@ -180,7 +180,7 @@ class PrivateUserApiTests(TestCase):
         """Test updating the user profile for an authenticated user"""
 
         payload = {"name": "updated name", "email": "updated@email.com"}
-        res = self.client.patch(ME_URL, payload)
+        res = self.client.put(ME_URL, payload)
 
         self.user.refresh_from_db()
 
