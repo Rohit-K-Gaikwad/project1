@@ -159,12 +159,10 @@ class PrivateUserApiTests(TestCase):
         """
         We are using `force_authenticate` function to set authentication flag
         to `True`
-        We don't want to create token and authenticate user under each test case
+        We don't want to create token and authenticate user under each testcase
         SO we have handled authentication part by `force authentication`.
-        
-        So any subsequent request to `/api/user/me` gets an already authenticated
-        user
-        
+        So any subsequent request to `/api/user/me` gets an already authentica
+        ted user
         """
         self.client.force_authenticate(user=self.user)
 
@@ -193,6 +191,3 @@ class PrivateUserApiTests(TestCase):
 
         res = self.client.post(ME_URL, {})
         self.assertEqual(res.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
-
-
-

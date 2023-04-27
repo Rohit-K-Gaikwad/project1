@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import JobTitle, Portal, JobDescription
+from app.core.models import JobTitle
 
 
 class JobTitleSerializer(serializers.ModelSerializer):
@@ -21,7 +21,8 @@ class JobDescriptionSerializer(JobTitleSerializer):
 
     Writing nested serializers
     - TODO - refer ->
-    - https://www.django-rest-framework.org/api-guide/serializers/#overriding-serialization-and-deserialization-behavior
+    - https://www.django-rest-framework.org/api-guide/serializers/
+    overriding-serialization-and-deserialization-behavior
 
     """
 
@@ -29,4 +30,3 @@ class JobDescriptionSerializer(JobTitleSerializer):
         fields = JobTitleSerializer.Meta.fields + [
             "job_description", "portal"
         ]
-

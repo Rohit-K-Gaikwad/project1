@@ -2,8 +2,7 @@ from django.contrib import admin  # noqa
 from django.contrib.auth import get_user_model
 
 # Register your models here.
-
-from .models import User
+# from .models import User
 
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 

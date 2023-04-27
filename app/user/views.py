@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 from .serializers import UserSerializer, AuthTokenSerializer
 from rest_framework.generics import CreateAPIView, RetrieveUpdateAPIView
@@ -18,7 +18,8 @@ class CreateTokenView(ObtainAuthToken):
     """
     TODO
     References
-    1. https://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication
+    1. https://www.django-rest-framework.org/api-guide/authentication/
+    #tokenauthentication
 
     """
 

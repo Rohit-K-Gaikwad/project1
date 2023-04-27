@@ -1,17 +1,17 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 # Create your views here.
 
 from rest_framework import viewsets
-from rest_framework.generics import CreateAPIView
+# from rest_framework.generics import CreateAPIView
 from .serializers import JobTitleSerializer, JobDescriptionSerializer
-from app.core.models import JobTitle
-from app.job import serializers
-from rest_framework import serializers
+from app.core import models
+# from app.job import serializers
+# from rest_framework import serializers
 
 
 from rest_framework.generics import CreateAPIView
-from rest_framework.viewsets import ModelViewSet
+# from rest_framework.viewsets import ModelViewSet
 
 
 class JobTitleViewSet(viewsets.ModelViewSet):
@@ -21,7 +21,7 @@ class JobTitleViewSet(viewsets.ModelViewSet):
     """
 
     serializer_class = JobDescriptionSerializer
-    queryset = JobTitle.objects.all()
+    queryset = models.JobTitle.objects.all()
 
     def get_serializer_class(self):
 

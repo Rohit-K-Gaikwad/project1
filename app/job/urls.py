@@ -6,9 +6,10 @@
 """
 
 from django.urls import path
-from job import views
+from . import views
 
 
 urlpatterns = [
-    path("jobtitle/", views.JobTitleViewSet.as_view({"get": "list"}), name="jobtitle"),
+    path("jobtitle/", views.JobTitleViewSet.as_view({"get": "list"}),
+         name="jobtitle"),
 ]
